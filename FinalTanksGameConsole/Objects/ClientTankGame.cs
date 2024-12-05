@@ -59,7 +59,7 @@ public class ClientTankGame {
         playerTank = tank;
     }
 
-    private async void GameTick() {
+    private async Task GameTick() {
         UserBot.GameTick(this); // This call plays the game from the bot point of view. 
 
         int ms = (DateTime.Now - lastUpdateTime).Milliseconds;
@@ -95,7 +95,7 @@ public class ClientTankGame {
             }
 
             if (playerTank.ShotBullet != null) {
-                ClientHelpers.SendBullet(client, id);
+                ClientHelpers.SendBullet(client, gameId, id);
                 playerTank.ShotBullet = null;
             }
         }
@@ -106,7 +106,7 @@ public class ClientTankGame {
         if (gameUpdate != null) {
             UpdateGameState(gameUpdate);
         }
-        Thread.Sleep(1000 / fps); // Moved here to sleep the async call, not the primary thread.
+        Thread.Sleep(1000 / fps);
     }
 
     public void UpdateGameState(ResponseGame incomingGame) {

@@ -41,11 +41,12 @@ Thread.Sleep(2000);
 game.StartGame();
 
 Console.Clear();
+// You can customize these inputs below.
+// Also, because of the limitations of the Console, you can only press one at a time.
 Console.WriteLine("Use WASD to move, J and K to rotate the arm, and K to fire.");
 
 while (true) {
-    Console.WriteLine(game.playerTank);
-    //Console.WriteLine("Tanks: "); // Eventually, have an output of the location of some tanks and some bullets. Maybe the closest ones? 
+    Console.WriteLine(game.playerTank); // You can customize your display; maybe you want to see the closest tank or some other relevant information
 
     ConsoleKey key = Console.ReadKey(true).Key;
     TankInputs action;
@@ -57,6 +58,7 @@ while (true) {
         case ConsoleKey.J: action = TankInputs.RotateArmRight; break;
         case ConsoleKey.L: action = TankInputs.RotateArmLeft; break;
         case ConsoleKey.K: action = TankInputs.Fire; break;
+        case ConsoleKey.Escape: game.StopGame(); Console.WriteLine("Game is stopped."); return;
         default: Console.WriteLine("Not a valid input."); continue;
     }
 

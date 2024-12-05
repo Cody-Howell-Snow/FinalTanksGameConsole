@@ -4,8 +4,8 @@ using System.Net.Http.Json;
 
 namespace FinalTanksGameConsole; 
 public class ClientHelpers {
-    public static void SendBullet(HttpClient client, int playerId) {
-        client.PutAsync($"/api/bullet/{playerId}", null); // Does not need to be awaited
+    public static void SendBullet(HttpClient client, int gameId, int playerId) {
+        client.PutAsync($"/api/bullet/{gameId}/{playerId}", null); // Does not need to be awaited
     }
 
     public static async Task<ResponseGame> GetServerUpdates(HttpClient client, int gameId) {

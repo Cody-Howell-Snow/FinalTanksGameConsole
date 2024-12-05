@@ -31,8 +31,6 @@ public static class UserBot
         //game.InsertInput(TankInputs.Forward);
 
 
-        // Otherwise, run through 
-
 
         // You *can* directly update the state of your player. It's a bit of a hack. A 
         // ResponseTank is the updates you send back to the server, so you can assign them values directly.

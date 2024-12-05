@@ -35,7 +35,7 @@ public partial class Tank {
     // Constructors are in a separate partial class
 
     public override string ToString() {
-        return $"X: {coords.x}, Y: {coords.y}, Rotation: {lowerRotation.RotationAngle}";
+        return $"X: {coords.x}, Y: {coords.y}, Movement Angle: {lowerRotation.RotationAngle}, Arm Angle: {upperRotation.RotationAngle}";
     }
 
     /// <summary>
