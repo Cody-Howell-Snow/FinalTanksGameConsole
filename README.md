@@ -9,18 +9,16 @@
 ### HOW TO PLAY
 
 **Using the client app via localhost:**
+First ensure you have an instance of the other project up.
+
 Navigate to the Games page and select a game to join.
 Open your console and follow the prompts.
- - First will be the link to your website; from the other project, this should be http://localhost:5080
- - Second, put in the Game ID. This should be in the address bar
+ - First will be the link to your website; from the other project, this should be http://localhost:5080 (or you can use a devtunnel for cross-devices)
+ - Second, put in the Game ID. This should be in the address bar.
  - Third, input a valid ID. It will convert it to a negative value to not conflict with other web-based players, and is limited by the C# Int size (2^32).
 
-Now you should be able to press keys in your console app and you should move on the web visualization. 
+Now you should be able to press keys in your console app and you will move on the web visualization. 
  
-**Using the client app via a DevTunnel:**
-Navigate to the Games page and select a game to join.
-If you are not logged in, you'll need to choose a player ID.
-Select the game board by clicking on it.
  
 Use `W` and `S` to move forward and backwards.
 `A` and `D` rotate counterclockwise and clockwise.
