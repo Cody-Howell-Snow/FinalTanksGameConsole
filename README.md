@@ -14,6 +14,7 @@ Open your console and follow the prompts.
  - First will be the link to your website; from the other project, this should be http://localhost:5080
  - Second, put in the Game ID. This should be in the address bar
  - Third, input a valid ID. It will convert it to a negative value to not conflict with other web-based players, and is limited by the C# Int size (2^32).
+
 Now you should be able to press keys in your console app and you should move on the web visualization. 
  
 **Using the client app via a DevTunnel:**
