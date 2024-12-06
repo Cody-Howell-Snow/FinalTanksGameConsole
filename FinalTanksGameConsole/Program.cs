@@ -2,7 +2,7 @@
 using FinalTanksGameConsole.Objects;
 using System.Net.Http.Json;
 
-Console.WriteLine("Insert the link to connect to the game to.");
+Console.WriteLine("Insert the URL to connect to the game to. It does not need a trailing /.");
 
 string link = Console.ReadLine();
 
